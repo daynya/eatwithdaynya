@@ -14,53 +14,76 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 100px 1fr;
+    grid-template-columns: 1fr 100px 2fr;
     grid-template-rows: auto auto;
 }
 
 .header {
-    background-image: url('./img/P1004366-1.jpg');
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
     display: grid;
     grid-column: 1 / 4;
     grid-row: 1 / 2;
+    min-height: 600px;
 }
 
-.menu-collapsed {
+.header.home {
+    background-image: url('./img/P1004366-1.jpg');
+}
+
+.header.lift {
+    background-image: url('./img/P1004367-1.jpg');
+}
+
+.header.about {
+    background-image: url('./img/P1004459-1.jpg');
+}
+
+.header.coaching {
+    background-image: url('./img/P1004366-1.jpg');
+}
+
+.menu-collapsed  {
     width: fit-content;
     margin-left: 1rem;
-    display: grid;
-    grid-column: 3 / 4;
-    grid-row: 1 / 2;
 }
 
 nav ul {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 2rem 10rem 2rem 0;
+    padding: 0 10rem 2rem 0;
+    color: black;
 }
 
 nav li {
     letter-spacing: .1rem;
     margin-left: 1.5rem;
-    color: white;
+    color: black;
+}
+
+nav li:hover, .link:hover {
+    border-bottom: 5px solid orangered;
 }
 
 nav li:first-of-type {
     margin-left: 0;
 }
 
-nav li, :visited {
+nav li {
     list-style: none;
     text-transform: uppercase;
-    color: white;
+}
+
+a:visited {
+    color: black;
 }
 
 .link {
     text-decoration: none;
+}
+
+.email.link {
+    color: slategrey;
 }
 
 h1, h2, h3, nav li {
@@ -77,10 +100,6 @@ h1.title {
     color: white;
 }
 
-.home {
-
-}
-
 .grid-container {
     background-color: white;
     display: grid;
@@ -92,6 +111,16 @@ h1.title {
 
 .grid-container p {
     max-width: 800px;
-    line-height: 1.8rem;
-    text-align: right;
+    line-height: 2rem;
+}
+
+.transparency {
+    background-color: rgba(0, 0, 0, .6);
+    height: 100%;
+    width: 100%;
+}
+
+.caps-heading {
+    text-transform: uppercase;
+    margin: 3rem 0 0 0;
 }
