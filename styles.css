@@ -5,12 +5,6 @@ body {
   font-size: 1.5rem;
 }
 
-.transparency {
-  background-color: black;
-  opacity: 0.7;
-  height: 100vh;
-}
-
 .container {
   display: grid;
   grid-template-columns: 1fr 100px 2fr;
@@ -25,13 +19,14 @@ body {
   grid-column: 1/4;
   grid-row: 1/2;
   min-height: 600px;
+  align-content: flex-start;
 }
 
 .header.home {
-  background-image: url("./img/P1004366-1.jpg");
+  background-image: url("./img/P1004367-1.jpg");
 }
 
-.header.lift {
+.header.tips {
   background-image: url("./img/P1004367-1.jpg");
 }
 
@@ -61,7 +56,7 @@ nav li {
 }
 
 nav li:hover, .link:hover {
-  border-bottom: 5px solid orangered;
+  border-bottom: 5px solid red;
 }
 
 nav li:first-of-type {
@@ -81,6 +76,29 @@ a:visited {
   text-decoration: none;
 }
 
+.home-link {
+  color: white;
+  text-decoration: none;
+  transform: rotate(-5deg);
+  margin-bottom: 25px;
+}
+
+.home-link:first-of-type {
+  margin-bottom: 10px;
+}
+
+.home-link.last {
+  transform: rotate(-2deg);
+}
+
+.home-link:visited {
+  color: white;
+}
+
+.home-link h1:hover {
+  background-color: red;
+}
+
 .email.link {
   color: slategrey;
 }
@@ -94,9 +112,12 @@ h1.title {
   text-transform: uppercase;
   font-size: 8rem;
   line-height: 7rem;
-  margin: 0 0 0 0.5rem;
-  padding-top: 10px;
+  margin: 0;
+  padding: 0.5rem 1rem;
   color: white;
+  background-color: black;
+  height: fit-content;
+  width: fit-content;
 }
 
 .grid-container {
